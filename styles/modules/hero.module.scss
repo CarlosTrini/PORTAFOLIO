@@ -1,0 +1,58 @@
+@use '../utils/variables'as vars;
+
+.hero {
+   display: grid;
+   place-content: center;
+   padding-bottom: 2rem;
+   width: 100%;
+   min-height: 100vh;
+   background: vars.$gradient;
+   background: vars.$gradient-percentaje;
+
+   &_image {
+      margin: 0 auto;
+      max-width: 22rem;
+      max-height: 22rem;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 .3rem .5rem vars.$dark;
+
+      img {
+         object-fit: cover;
+      }
+   }
+
+   &_content {
+      text-align: center;
+      color: vars.$light;
+      text-shadow: 0 0 .5rem vars.$dark;
+
+
+      .hero_head {
+         margin: 1rem 0;
+      }
+
+      .hero_body {
+         max-width: 50rem;
+         margin-top: 1rem;
+         font-weight: vars.$bold;
+      }
+   }
+
+
+   .hero_socials {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem auto 0;
+      max-width: 60rem;
+
+      li {
+         font-weight: vars.$bold;
+         color: vars.$light;
+
+      }
+   }
+}

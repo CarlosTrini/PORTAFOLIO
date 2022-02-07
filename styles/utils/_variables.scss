@@ -1,0 +1,39 @@
+// FONTS
+$family: 'Nunito', sans-serif;
+$regular:400;
+$medium:500;
+$bold:700;
+
+$titles-sizes-md: (
+   'h1': 40px,
+   'h2' : 32px,
+   'h3': 28px,
+   'h4': 21px
+);
+$titles-sizes-lg:(
+   'h1': 60px,
+   'h2' : 40px,
+   'h3': 25px,
+   'h4': 19px
+);
+
+//BREAKPOINTS
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+//COLORS
+$light:#fdf9f9;
+$dark:#151313;
+$prussian-blue:#173753;  //main
+$charcoal:#1B4353; //secondary
+$iceberg:#6DAEDB;  //third
+$tufts-blue:#2892D7; //fourth
+$honolulu-blue:#1D70A2; //five
+$gradient: rgb(27,67,83);
+$gradient-percentaje: linear-gradient(0deg, $prussian-blue 33%, $iceberg 33%, $iceberg 66%, $prussian-blue 66%);

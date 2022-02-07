@@ -1,0 +1,88 @@
+@use './utils/variables'as vars;
+@use './utils/mixins'as mixins;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding-top: 4.5rem;
+  font-family: vars.$family;
+  font-weight: vars.$regular;
+  line-height: 1.1;
+  background:vars.$prussian-blue;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+}
+
+p{
+  line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+figure {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+@each $name, $value in vars.$titles-sizes-md {
+  #{$name} {
+    font-size: $value
+  }
+}
+
+
+@include mixins.phone{
+  @each $name, $value in vars.$titles-sizes-lg{
+    #{$name}{
+      font-size: $value;
+    }
+  }
+}
+
+
+
+.container {
+  width: 90%;
+  max-width: map-get($map:vars.$grid-breakpoints, $key: 'xxl');
+  margin: 0 auto;
+}
+
+.titles_sections{
+  margin: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: vars.$light;
+}

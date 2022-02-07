@@ -1,0 +1,155 @@
+@use '../utils/variables'as vars;
+
+.techs{
+  text-align: center;
+  color: vars.$light;
+}
+.projects{
+  background:
+    url('/images/wave_projects.svg') bottom/cover no-repeat;
+  padding:2rem 0 5rem;
+}
+.technologies_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 2rem 1rem;
+  .technologies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color:vars.$light;
+    font-weight: vars.$bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-align: center;
+    figure{
+      width:1.5625rem ;
+      height:1.56256rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+.projects_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.card_project {
+  position: relative;
+  min-height: 21rem;
+  overflow: hidden;
+  border-radius: .5rem;
+  transition: all .3s ease-in-out;
+
+  // hovers
+  &:hover {
+    box-shadow: 0 .2rem .4rem vars.$iceberg;
+  }
+
+  &:hover .project_body {
+    left: 0;
+  }
+
+  //details card
+
+  .project_head{
+    figure{
+      display: flex;
+      min-width: 21.5rem;
+      height: 23rem;
+    }
+  }
+  
+  .project_body {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: vars.$bold;
+    color: vars.$light;
+    
+    transition: all .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: vars.$gradient;
+      background: vars.$gradient-percentaje;
+      filter: opacity(.9);
+    }
+    
+    //clases and tags
+
+    
+    .project_title{
+      padding-bottom: .5rem;
+      border-bottom: .1rem solid vars.$light;
+    }
+    .project_host{
+    }
+    .project_links{
+      display: flex;
+      justify-content: space-evenly;
+      font-weight: vars.$bold;
+      a{
+        padding-bottom: .5rem;
+        border-bottom: .2rem solid transparent;
+        transition: all .3s ease-in-out;
+        &::before, &::after{
+          content: '|';
+          color: vars.$light;
+          margin:.1rem;
+
+        }
+      }
+      a:hover{
+        text-shadow: 0 0 .5rem vars.$iceberg;
+        border-bottom: .2rem solid vars.$light;
+      }
+    }
+
+    .project_techs{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: .5rem;
+      padding-top: .5rem;
+      border-top: .1rem solid vars.$light;
+      
+      figure{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+
+  } //project_body
+}
+
+// .project_details {
+
+
+
+// }

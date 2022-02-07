@@ -1,0 +1,142 @@
+@use '../utils/variables'as vars;
+@use '../utils/mixins'as mixins;
+@use '../utils/extends';
+
+
+.about{
+  min-height: 100vh;
+  width: 100%;
+  transform:translateX(-200%);  // animation show_about_section
+  background:vars.$prussian-blue url('/images/wave.svg') center/cover no-repeat ;
+
+  
+  @include mixins.phone{
+    display: flex;
+    
+  }
+
+  &_aside{
+    display: grid;
+    gap: 1rem;
+    flex: 0 0 10rem;
+    padding: 1rem .5rem;
+    text-transform: capitalize;
+    // background: vars.$prussian-blue;
+
+    p{
+      font-weight: vars.$bold;
+      color: vars.$light;
+      text-shadow: 0 0 10px vars.$honolulu-blue;
+    }
+    span, li{
+      display: block;
+      color: vars.$light;
+    }
+    ul{
+      display: grid;
+      gap: .5rem;
+    }
+
+  } 
+
+  &_content{
+    flex: 1;
+    padding: 1rem;
+    opacity: 0;
+
+
+    &_presentation{
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      figure{
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      p{
+        color: vars.$light;
+        font-weight: vars.$bold;
+      }
+
+      
+    }
+
+    .about_card_container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+      color: vars.$prussian-blue;
+    }
+
+    &_card{
+      padding: 1rem;
+      text-align: center;
+      color:vars.$light;
+      border-radius: .5rem;
+      background: url('/images/job.svg') center/cover no-repeat;
+      box-shadow: 0 .5rem .5rem vars.$dark;
+      outline: vars.$light solid 2px;
+      outline-offset: -10px;
+
+      figure{
+        width: 2rem;
+        height: 2rem;
+        margin: 0 auto 1rem;
+      }
+      h5{
+        margin:1rem 0;
+      }
+      ul{
+        display: grid;
+        gap: .5rem;
+      }
+    }
+
+    &_image{
+      margin:auto;
+      min-width:10rem;
+      min-height: 10rem;
+      border-radius: 50%;
+      transition:  all .5s ease-in-out;
+      background: url('/images/wave_menu.svg') center/cover no-repeat;
+    }
+  }
+}
+
+
+.show_about_section{
+  animation:show_about_section_animation ease-in-out .5s forwards;
+}
+.show_content{
+  animation:show ease-in-out .7s forwards;
+}
+.show_job{
+  animation:show_job_animation ease-in-out .8s forwards;
+}
+
+
+
+@keyframes show_about_section_animation {
+  0%{
+    transform: translateX(-200%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes show_job_animation{
+  0%{
+    transform: translateX(-500%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes show {
+  0%{
+   opacity: 0;
+  }
+  100%{
+   opacity: 1;
+  }
+}
