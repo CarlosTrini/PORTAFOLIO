@@ -22,6 +22,7 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     pid && getProject();
+    //eslint-disable-next-line
   }, [pid]);
 
   if (!(project?.techs)) {
@@ -36,6 +37,7 @@ const ProjectDetail = () => {
             <figure className={styles.project_img}>
               <Image
                 src={`/images/sites/${project.img}.png`}
+                alt={project.name}
                 width="500"
                 height="300"
               />
@@ -62,13 +64,13 @@ const ProjectDetail = () => {
           </p>
 
           <div className={styles.project_links}>
-            <a href={project.github.front} target="_blank">github FrontEnd</a>
+            <a href={project.github.front} target="_blank" rel="noreferrer">github FrontEnd</a>
             {
-              project.github?.back && <a href={project.github.back} target="_blank">github BackEnd</a>
+              project.github?.back && <a href={project.github.back} target="_blank" rel="noreferrer">github BackEnd</a>
             }
-            <a href={project.url} target="_blank">sitio</a>
+            <a href={project.url} target="_blank" rel="noreferrer">sitio</a>
             <Link href="/projects">
-              <a >Regresar...</a>
+              <a rel="noreferrer">Regresar...</a>
             </Link>
           </div>
 

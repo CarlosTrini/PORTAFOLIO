@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import TechsItems from './TechsItems';
 
@@ -27,9 +28,10 @@ const CardProject = ({ project }) => {
     <article className={styles.card_project}>
       <header className={styles.project_head}>
         <figure>
-          <img
+          <Image
             src={sitesImg[img].src}
             alt='project image'
+            layout="fill"
           />
         </figure>
       </header>
@@ -50,13 +52,13 @@ const CardProject = ({ project }) => {
 
         <div className={styles.project_links}>
           <Link href="/project/[pid]" as={`/project/${id}`}>
-            <a>Ver más</a>
+            <a rel="noreferrer">Ver más</a>
           </Link>
-          <a href={github.front} target="_blank">github FrontEnd</a>
+          <a href={github.front} target="_blank" rel="noreferrer">github FrontEnd</a>
           {
-            github?.back && <a href={github.back} target="_blank">github BackEnd</a>
+            github?.back && <a href={github.back} target="_blank" rel="noreferrer">github BackEnd</a>
           }
-          <a href={url} target="_blank">sitio</a>
+          <a href={url} target="_blank" rel="noreferrer">sitio</a>
         </div>
 
 

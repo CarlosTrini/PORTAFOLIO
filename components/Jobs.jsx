@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 
@@ -9,34 +9,7 @@ import aboutImage from 'public/images/img1.svg';
 
 
 const Jobs = ({ presentation, jobExperience }) => {
-
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef(null);
-
-  const cb = (entries) => {
-    const [entry] = entries;
-    console.log(entry.isIntersecting)
-    setIsVisible(entry.isIntersecting); // false or true
-  }
-
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: .5
-  };
-
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(cb, options);
-    if (elementRef.current) observer.observe(elementRef.current);
-
-
-    return () => {
-      if (elementRef.current) observer.unobserve(elementRef.current);
-    }
-  }, [elementRef, options]);
-
-
+  
   return (
     <>
       <section
@@ -47,7 +20,6 @@ const Jobs = ({ presentation, jobExperience }) => {
           <figure className={`${styles.about_content_image}`} >
           <Image src={aboutImage} alt="image about section" />
         </figure>
-        
           <figure>
             <Image src={aboutIcon} alt="presetation icon" />
           </figure>
@@ -74,7 +46,6 @@ const Jobs = ({ presentation, jobExperience }) => {
                   activities.map((a, i) => <ul key={i}><li>{a}</li></ul>)
                 }
               </article>
-
             )
           }
         </div>

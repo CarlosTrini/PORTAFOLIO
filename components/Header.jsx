@@ -18,6 +18,13 @@ const Header = () => {
             <Image src={menuIcon} alt="menu responsive icon" />
          </button>
 
+         <a 
+            href="https://drive.google.com/file/d/1PG9Hae4S-Wj8QViolmw2rwoDG3KDLqCk/view?usp=sharing" 
+            target="_blank" 
+            rel="noreferrer"
+            className={styles.cv_link}
+            >Descarga mi CV</a>
+
          <ul className={`${styles.links}  ${toggle && styles.show_menu}`} >
             <li className={styles.link}> <Link href="/" >Inicio</Link>  </li>
             <li> <Link href="/about" >Acerca</Link>  </li>

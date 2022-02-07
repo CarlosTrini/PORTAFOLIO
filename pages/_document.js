@@ -10,14 +10,13 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          
+          <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-          <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         </Head>
         <body>
           <Main />
