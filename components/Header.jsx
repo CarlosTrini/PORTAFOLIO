@@ -19,7 +19,7 @@ const Header = () => {
          </button>
 
          <a 
-            href="https://drive.google.com/file/d/1gC-xTycN0dPw9Izx2DaU6K7_-RtFMrpD/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1YKS4fdeCK4NNYMwoTnwASjuoxEW1oGyd/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer"
             className={styles.cv_link}
