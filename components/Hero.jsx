@@ -28,7 +28,7 @@ const Hero = () => {
                      {
                         socials.map(s =>
                            <li key={s.social}>
-                              <a href={s.link}>
+                              <a href={s.link} target="_blank" rel="noreferrer">
                                  <Image
                                     src={`/images/iconsTech/${s.social}.png`}
                                     alt={`${s.social} icon`}

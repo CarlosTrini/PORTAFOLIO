@@ -147,6 +147,27 @@ export const projects = [
       back: "https://github.com/CarlosTrini/login-MERN-BACK",
     },
   },
+  ,
+  {
+    id: "821fb4j7-903cs-2943c-ñlks-g239a3i7s1t09",
+    name: "Portafolio",
+    hosting: "vercel",
+    url: "https://portafolio-nine-zeta.vercel.app/",
+    description:
+      "Mi portafolio web. Realizado con Nextjs, SCSS module"  ,
+    tags: [
+      "react",
+      "NextJs",
+      "scss",
+      "Github",
+    ],
+    techs: ["react", "nextjs", "scss"],
+    img: "portafolio",
+    github: {
+      front: "https://github.com/CarlosTrini/PORTAFOLIO",
+      back: "",
+    },
+  },
   {
     id: "69f41795-1049-441c-9ba7-606ae54a0502",
     name: "Juego Rick&Morty",

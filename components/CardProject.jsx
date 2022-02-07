@@ -11,6 +11,7 @@ import loginmern from 'public/images/sites/loginmern.png';
 import eventorganizer from 'public/images/sites/eventorganizer.png';
 import hallowenstore from 'public/images/sites/hallowenstore.png';
 import barbershop from 'public/images/sites/barbershop.png';
+import portafolio from 'public/images/sites/portafolio.png';
 
 const sitesImg = {
   rym,
@@ -18,7 +19,8 @@ const sitesImg = {
   loginmern,
   eventorganizer,
   hallowenstore,
-  barbershop
+  barbershop,
+  portafolio
 }
 
 const CardProject = ({ project }) => {
