@@ -5,23 +5,23 @@ import Image from 'next/image';
 import TechsItems from './TechsItems';
 
 import styles from 'styles/modules/projects.module.scss';
-import rym from 'public/images/sites/rym.png';
-import myfeeling from 'public/images/sites/myfeeling.png';
-import loginmern from 'public/images/sites/loginmern.png';
-import eventorganizer from 'public/images/sites/eventorganizer.png';
-import hallowenstore from 'public/images/sites/hallowenstore.png';
-import barbershop from 'public/images/sites/barbershop.png';
-import portafolio from 'public/images/sites/portafolio.png';
+// import rym from 'public/images/sites/rym.png';
+// import myfeeling from 'public/images/sites/myfeeling.png';
+// import loginmern from 'public/images/sites/loginmern.png';
+// import eventorganizer from 'public/images/sites/eventorganizer.png';
+// import hallowenstore from 'public/images/sites/hallowenstore.png';
+// import barbershop from 'public/images/sites/barbershop.png';
+// import portafolio from 'public/images/sites/portafolio.png';
 
-const sitesImg = {
-  rym,
-  myfeeling,
-  loginmern,
-  eventorganizer,
-  hallowenstore,
-  barbershop,
-  portafolio
-}
+// const sitesImg = {
+//   rym,
+//   myfeeling,
+//   loginmern,
+//   eventorganizer,
+//   hallowenstore,
+//   barbershop,
+//   portafolio
+// }
 
 const CardProject = ({ project }) => {
   const { id, name, hosting, url, description, techs, img, github } = project;
@@ -31,7 +31,8 @@ const CardProject = ({ project }) => {
       <header className={styles.project_head}>
         <figure>
           <Image
-            src={sitesImg[img].src}
+            // src={sitesImg[img].src}
+            src={`/images/sites/${img}.png`}
             alt='project image'
             layout="fill"
           />
