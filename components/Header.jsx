@@ -7,23 +7,35 @@ import styles from 'styles/modules/header.module.scss';
 
 const Header = () => {
    const [toggle, setToggle] = useState(false);
+   const [hideArrow, setHideArrow] = useState(false);
 
    const handleMenu = (e) => {
       setToggle(!toggle);
+      setHideArrow(true);
    }
 
    return (
       <header className={styles.header}>
-         <button className={styles.icon_button} onClick={handleMenu}>
-            <Image src={menuIcon} alt="menu responsive icon" />
-         </button>
+         <div className={styles.menu_container}>
+            <button className={styles.icon_button} onClick={handleMenu}>
+               <Image src={menuIcon} alt="menu responsive icon" />
+            </button>
+            {
+               !hideArrow &&
+               <div className={styles.alert_menu}>
+                  <Image src="/images/left-arrow.svg" alt='arrow' width="40" height="40" />
+                  <span>click</span>
+               </div>
+            }
 
-         <a 
-            href="https://drive.google.com/file/d/1YKS4fdeCK4NNYMwoTnwASjuoxEW1oGyd/view?usp=sharing" 
-            target="_blank" 
+         </div>
+
+         <a
+            href="https://drive.google.com/file/d/1YKS4fdeCK4NNYMwoTnwASjuoxEW1oGyd/view?usp=sharing"
+            target="_blank"
             rel="noreferrer"
             className={styles.cv_link}
-            >Descarga mi CV</a>
+         >Descarga mi CV</a>
 
          <ul className={`${styles.links}  ${toggle && styles.show_menu}`} >
             <li className={styles.link}> <Link href="/" >Inicio</Link>  </li>
