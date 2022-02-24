@@ -2,8 +2,8 @@ export const dataHero = {
   title: "{ Portafolio }",
   presentation: {
     head: "Bienvenido a mi portafolio web",
-    bann: "Junior Web Development",
-    body: "Aquí podrás encontrar un poco acerca de mí, de las técnologías que he estado aprendiendo, (De manera totalmente autodidacta) asi como algunos proyectos que he realizado durante mi aprendizaje",
+    bann: "FrontEnd Development",
+    body: "Aquí podrás encontrar un poco acerca de mí, de las técnologías que he estado aprendiendo, (De manera totalmente autodidacta) asi como algunos proyectos FrontEnd, y fullStack que he realizado durante mi aprendizaje",
   },
 };
 export const personalData = [
