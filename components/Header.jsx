@@ -31,7 +31,7 @@ const Header = () => {
          </div>
 
          <a
-            href="https://drive.google.com/file/d/1YKS4fdeCK4NNYMwoTnwASjuoxEW1oGyd/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Y2rx7lt-r2gioh4zPZB9ObszALhhDB4y/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className={styles.cv_link}
