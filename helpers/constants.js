@@ -249,4 +249,3 @@ export const technologies = [
   {tech: "Firebase", img:"firebase"},
   {tech: "Mongo DB", img:"mongodb"},
 ];
-
