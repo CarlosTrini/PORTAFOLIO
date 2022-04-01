@@ -147,7 +147,21 @@ export const projects = [
       back: "https://github.com/CarlosTrini/login-MERN-BACK",
     },
   },
-  ,
+  {
+    id: "31b4fa1f-7eee-4f1e-b3cb-2b1226677379",
+    name: "Star Wars",
+    hosting: "netlify",
+    url: "https://star-wars-api-react.netlify.app/",
+    description:
+      "Página construida con  ReactJs, la cual consume una api de star wars. Aplicando scroll infinito, modo oscuro. Haciendo uso de Redux, permite agregar y eliminar un personaje de favoritos con data persistente , y ejecutar peticiones para llenar el state de los personajes",
+    tags: ["React", "SCSS", "JavaScript", "Github", "React-intersection-observer", "Redux", "Redux-thunk"],
+    techs: ["react", "scss", "js", "github", "redux"],
+    img: "starwars",
+    github: {
+      front: "https://github.com/CarlosTrini/star-wars-api",
+      back: "",
+    },
+  },
   {
     id: "821fb4j7-903cs-2943c-ñlks-g239a3i7s1t09",
     name: "Portafolio",
@@ -215,6 +229,9 @@ export const projects = [
       back: "",
     },
   },
+  ,
+
+
 ];
 export const technologies = [
   {tech :"javaScript", img:"js"},
