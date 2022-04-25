@@ -32,6 +32,9 @@ const Layout = ({children, showFooter}) => {
             content={`${originSite}/images/sites/portafolio.png`}
           />
           <meta property="og:type" content="article" />
+          <meta name="description" content="Bienvenido a mi portafolio web, en el cual muestro algunos proyectos realizados durante mis practicas" />
+          
+          <title>Portafolio web FrontEnd</title>
         </Head>
 
          <Header />
